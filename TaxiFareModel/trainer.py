@@ -22,7 +22,7 @@ class Trainer():
         self.pipeline = None
         self.X = X
         self.y = y
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.2)
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.3)
 
     def set_pipeline(self):
         """defines the pipeline as a class attribute"""
