@@ -32,7 +32,7 @@ class Trainer():
         
         time_pipe = Pipeline([
         ('time_encoder', TimeFeaturesEncoder('pickup_datetime')),
-        ('cat_encoder', OneHotEncoder())])
+        ('cat_encoder', OneHotEncoder(handle_unknown='ignore'))])
         
         prepro_pipe = ColumnTransformer([
         ('Distance', dist_pipe, ["pickup_latitude","pickup_longitude","dropoff_latitude","dropoff_longitude"]),
